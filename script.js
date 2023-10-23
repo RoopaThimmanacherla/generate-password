@@ -22,6 +22,8 @@ function writePassword() {
   var specialChar = "!#$%&’(),*+-./:;<=>?@[]^_`{|}~".split("");
   var selectedChars = "";
 
+  // Adding the selected chars to the array
+
   if (isUppercase == true) {
     selectedChars = selectedChars.concat(upperCase);
   }
@@ -34,6 +36,8 @@ function writePassword() {
   if (isSpecialchar == true) {
     selectedChars = selectedChars.concat(specialChar);
   }
+
+  //checks for password length and whether atleast one type of character is selected and call the function to generate password
   if (passwordLength != null && passwordLength >= 8 && passwordLength <= 128) {
     if (
       isUppercase == true ||
@@ -41,7 +45,6 @@ function writePassword() {
       isNumeric == true ||
       isSpecialchar == true
     ) {
-      console.log(generate);
       generatePassword();
     } else {
       alert("atleast one character should be selected");
@@ -51,25 +54,24 @@ function writePassword() {
     alert("invalid password length");
     return;
   }
+  // Gnerate the password for the selected criteria
   function generatePassword() {
     var result = "";
     if (isUppercase && passwordLength > result.length) {
       result += upperCase[Math.floor(Math.random() * upperCase.length)];
     }
     if (isLowercase && passwordLength > result.length) {
-      result = result + lowerCase[Math.floor(Math.random() * lowerCase.length)];
+      result += lowerCase[Math.floor(Math.random() * lowerCase.length)];
     }
     if (isNumeric && passwordLength > result.length) {
-      result = result + numbers[Math.floor(Math.random() * numbers.length)];
+      result += numbers[Math.floor(Math.random() * numbers.length)];
     }
     if (isSpecialchar && passwordLength > result.length) {
-      result =
-        result + specialChar[Math.floor(Math.random() * specialChar.length)];
+      result += specialChar[Math.floor(Math.random() * specialChar.length)];
     }
     if (passwordLength > result.length) {
       for (i = result.length; i < passwordLength; i++) {
-        result =
-          result +
+        result +=
           selectedChars[Math.floor(Math.random() * selectedChars.length)];
       }
     }
