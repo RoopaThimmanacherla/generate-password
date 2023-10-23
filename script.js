@@ -16,11 +16,12 @@ function writePassword() {
   var isSpecialchar = confirm(
     "Do you want special characters in the password?"
   );
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  var numbers = "0123456789";
-  var specialChar = "!#$%&’(),*+-./:;<=>?";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
+  var numbers = "0123456789".split("");
+  var specialChar = "!#$%&’(),*+-./:;<=>?@[]^_`{|}~".split("");
   var selectedChars = "";
+
   if (isUppercase == true) {
     selectedChars = selectedChars.concat(upperCase);
   }
