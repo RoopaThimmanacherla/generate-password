@@ -27,6 +27,10 @@
 ![6](https://github.com/RoopaThimmanacherla/generate-password/assets/144958836/0c42ec6e-bdcd-4122-aaac-f1d171e194f6)
 
 
+Git hub URL: https://github.com/RoopaThimmanacherla/generate-passwordLinks to an external site.
+
+Deployed Application URL: https://roopathimmanacherla.github.io/generate-password/
+
 # References
 
 Referred to the activities, mini project,google and w3 schools.
